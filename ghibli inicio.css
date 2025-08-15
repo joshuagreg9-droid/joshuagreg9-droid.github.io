@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+.contenedor {
+  max-width: 900px;
+  margin: auto;
+}
+
+
+header {
+  position: fixed;
+  top: 0; 
+  z-index: 9999
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  position: relative;
+  right: 55px;
+  justify-content: center;
+  padding: 1rem;
+  background: transparent;
+}
+
+header nav ul li a {
+  color: #678b5b;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 6px 4.5rem;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: white;
+}
+
+
+
+.article {
+  height: 750px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+
+#sec1 {
+  background: url('imagenes ghibli/pagina 1.jpg') no-repeat center/cover;
+  padding-top: 179px;
+}
+
+
+
+#slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+#slider ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 400%;
+  animation: slide 20s infinite;
+}
+
+#slider ul li {
+  list-style: none;
+  flex: 1;
+  padding: 0.5rem;
+}
+
+#slider img {
+  width: 62%;
+  position: relative;
+  left: 165px;
+  border-radius: 15px;
+}
+
+@keyframes slide {
+  0%, 20% { margin-left: 0; }
+  25%, 45% { margin-left: -100%; }
+  50%, 70% { margin-left: -200%; }
+  75%, 100% { margin-left: -300%; }
+}
+
+.texto-intro {
+  margin-top: 1rem;
+  position: relative;
+  bottom: -11px;
+  color: #65645f;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+
+#sec2 {
+  background-color: #BBD687;
+  height: 491px;
+}
+
+#sec2 h2 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: #678b5b;
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #f0eedd;
+  padding: 1rem;
+  width: 26%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3{
+    font-family: 'Times New Roman', Times, serif;
+    color: #678b5b;
+    font-size: 28px;
+    text-align: center;
+}
+
+.card p{
+    color: #65645f;
+    text-align: center;
+    padding-top: 6px;
+}
+
+.more-button a {
+  background-color: #678b5b;
+  color: #adcfa2;
+  font-size: 28px;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+  position: relative;
+  top: 367px;
+  left: 343px;
+}
+
+.more-button a:hover {
+  transform: scale(1.1);
+  color: azure;
+}
+
+
+#sec3 {
+  background: url('imagenes ghibli/pagina nube.jpg') no-repeat center/cover;
+  position: relative;
+  height: 647px;
+}
+
+
+.contenido3 {
+  display: flex;
+  gap: -4rem;
+  padding: 2rem;
+}
+
+.contenido3 img {
+  width: 40%;
+}
+
+
+
+.bio-video {
+  margin: 20px;
+  position: relative;
+  top: 181px;
+  right: -3px;
+}
+
+.bio-video iframe {
+  width: 341px;
+  height: 180px;
+}
+
+.slider {
+  position: relative;
+  bottom: 92px;
+  left: 512px;
+  width: 300px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+
+input[type="radio"] {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slides a img {
+  width: 300px;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+
+#slide1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .slides {
+  transform: translateX(-25%);
+}
+
+#slide3:checked ~ .slides {
+  transform: translateX(-50%);
+}
+
+#slide4:checked ~ .slides {
+  transform: translateX(-75%);
+}
+
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+
+#slide1:checked ~ .dots label[for="slide1"],
+#slide2:checked ~ .dots label[for="slide2"],
+#slide3:checked ~ .dots label[for="slide3"],
+#slide4:checked ~ .dots label[for="slide4"] {
+  background-color: #678b5b;
+}
+
+#sec4 {
+  background-color: #f0eedd;
+  padding: 3rem;
+  width: 806px;
+  padding-bottom: 5px;
+  height: 644px;
+  position: relative;
+  left: 214px;
+}
+
+#sec4 h2 {
+  text-align: center;
+  color: #678b5b;
+  font-size: 40px;
+}
+
+#sec4 h4 {
+    color: #678b5b;
+    font-size: 20px;
+}
+
+.faq {
+  display: flex;
+  justify-content: space-around;
+}
+
+.preguntas{
+    position: relative;
+    bottom: -28px;
+}
+
+audio{position: relative;
+      top: 76px;
+      right: 9px}
+
+.mapa{width: 600;
+  height: 450;
+  border:0;
+  position: relative;
+  top: 5px;
+  left:412px}
+
+.mapa iframe{width: 600;
+  height: 450;
+  border:0;}
+
+
+#sec4 img {
+  display: block;
+  margin: 9rem auto 0;
+  width: 333px;
+  position: relative;
+  right: 243px;
+  bottom: 213px;
+}
+
+
+.participabut a {
+  background-color: #678b5b;
+  color: #adcfa2;
+  font-size: 28px;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+  position: relative;
+  top: 283px;
+  left: 439px;
+}
+
+.participabut a:hover {
+  transform: scale(1.1);
+  color: azure;
+}
+
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+}
+
+#topBtn img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  right: 200px;
+  bottom: 72px;
+}
+
+
+footer {
+  background-color: #65645f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 871px;
+  position: relative;
+  left: 214px;
+}
+
+.footer-right {
+  position: relative;
+  left: -5px;
+  text-align: right;
+}
+
+.footer-center{
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-center img {
+  width: 25px;
+  margin: 0 5px;
+}
